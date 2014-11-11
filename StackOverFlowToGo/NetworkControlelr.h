@@ -14,6 +14,7 @@
 @property (strong, nonatomic) NSString *clientSecret;
 @property (strong, nonatomic) NSString *key;
 @property (strong, nonatomic) NSString *OAUTHDomain;
+@property (strong, nonatomic) NSString *clientID;
 
 - (NSMutableArray *) postsFetchRequest: (NSString *) searchTerm completionHandler: (void (^)(NSError* error, NSMutableArray* questions))sucess;
 

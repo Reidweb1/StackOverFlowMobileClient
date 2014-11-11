@@ -14,7 +14,8 @@
 - (instancetype) init{
     self.clientSecret = @"HPf)RuUD6Yb*Sj*jXoZmRg((";
     self.key = @"ErfvNInTQQtGe*1gBLcpuw((";
-    self.OAUTHDomain = @"stackexchange.com/oauth/login_success";
+    self.OAUTHDomain = @"https://stackexchange.com/oauth/dialog";
+    self.clientID = @"3837";
     self.urlSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     return self;
 }

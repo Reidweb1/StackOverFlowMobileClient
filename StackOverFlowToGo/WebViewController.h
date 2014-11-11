@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 
-@interface WebViewController : UIViewController
+@interface WebViewController : UIViewController <UIWebViewDelegate>
+
+@property (strong, nonatomic) NSString *clientSecret;
+@property (strong, nonatomic) NSString *key;
+@property (strong, nonatomic) NSString *OAUTHDomain;
+@property (strong, nonatomic) NSString *clientID;
 
 @end

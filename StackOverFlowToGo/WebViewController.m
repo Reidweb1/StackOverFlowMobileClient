@@ -19,7 +19,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSURL *url = [[NSURL alloc] initWithString:(@"http://espn.go.com")];
+    
+    self.clientSecret = @"HPf)RuUD6Yb*Sj*jXoZmRg((";
+    self.key = @"ErfvNInTQQtGe*1gBLcpuw((";
+    self.OAUTHDomain = @"https://stackexchange.com/oauth/dialog";
+    self.clientID = @"3837";
+    
+    NSString *urlString = [[NSString alloc] initWithFormat:@"%@?client_id=%@&redirect_uri=%@&scope=read_inbox", _OAUTHDomain, _clientID, _OAUTHDomain];
+    
+    NSURL *url = [[NSURL alloc] initWithString:(urlString)];
+    NSLog(@"%@", url);
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     [self.webView loadRequest:(request)];
 }
@@ -32,6 +41,10 @@
 - (void)loadView {
     self.webView = [[WKWebView alloc] init];
     self.view = self.webView;
+}
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    return true;
 }
 
 /*
