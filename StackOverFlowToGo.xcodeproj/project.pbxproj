@@ -10,11 +10,14 @@
 		289AC2AC1A1163C7003AB3A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 289AC2AB1A1163C7003AB3A6 /* main.m */; };
 		289AC2AF1A1163C7003AB3A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 289AC2AE1A1163C7003AB3A6 /* AppDelegate.m */; };
 		289AC2B21A1163C7003AB3A6 /* StackOverFlowToGo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 289AC2B01A1163C7003AB3A6 /* StackOverFlowToGo.xcdatamodeld */; };
-		289AC2B51A1163C7003AB3A6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289AC2B41A1163C7003AB3A6 /* ViewController.m */; };
 		289AC2B81A1163C7003AB3A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289AC2B61A1163C7003AB3A6 /* Main.storyboard */; };
 		289AC2BA1A1163C7003AB3A6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 289AC2B91A1163C7003AB3A6 /* Images.xcassets */; };
 		289AC2BD1A1163C7003AB3A6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 289AC2BB1A1163C7003AB3A6 /* LaunchScreen.xib */; };
 		289AC2C91A1163C7003AB3A6 /* StackOverFlowToGoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 289AC2C81A1163C7003AB3A6 /* StackOverFlowToGoTests.m */; };
+		289AC2D41A116511003AB3A6 /* NetworkControlelr.m in Sources */ = {isa = PBXBuildFile; fileRef = 289AC2D31A116511003AB3A6 /* NetworkControlelr.m */; };
+		289AC2D71A116D1A003AB3A6 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 289AC2D61A116D1A003AB3A6 /* Question.m */; };
+		289AC2DA1A116D25003AB3A6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 289AC2D91A116D25003AB3A6 /* User.m */; };
+		289AC2E31A116DA9003AB3A6 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289AC2E21A116DA9003AB3A6 /* QuestionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +37,20 @@
 		289AC2AD1A1163C7003AB3A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		289AC2AE1A1163C7003AB3A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		289AC2B11A1163C7003AB3A6 /* StackOverFlowToGo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StackOverFlowToGo.xcdatamodel; sourceTree = "<group>"; };
-		289AC2B31A1163C7003AB3A6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		289AC2B41A1163C7003AB3A6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		289AC2B71A1163C7003AB3A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		289AC2B91A1163C7003AB3A6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		289AC2BC1A1163C7003AB3A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		289AC2C21A1163C7003AB3A6 /* StackOverFlowToGoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackOverFlowToGoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		289AC2C71A1163C7003AB3A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		289AC2C81A1163C7003AB3A6 /* StackOverFlowToGoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StackOverFlowToGoTests.m; sourceTree = "<group>"; };
+		289AC2D21A116511003AB3A6 /* NetworkControlelr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkControlelr.h; sourceTree = "<group>"; };
+		289AC2D31A116511003AB3A6 /* NetworkControlelr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkControlelr.m; sourceTree = "<group>"; };
+		289AC2D51A116D1A003AB3A6 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		289AC2D61A116D1A003AB3A6 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		289AC2D81A116D25003AB3A6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		289AC2D91A116D25003AB3A6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		289AC2E11A116DA9003AB3A6 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
+		289AC2E21A116DA9003AB3A6 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +94,9 @@
 			children = (
 				289AC2AD1A1163C7003AB3A6 /* AppDelegate.h */,
 				289AC2AE1A1163C7003AB3A6 /* AppDelegate.m */,
-				289AC2B31A1163C7003AB3A6 /* ViewController.h */,
-				289AC2B41A1163C7003AB3A6 /* ViewController.m */,
-				289AC2B61A1163C7003AB3A6 /* Main.storyboard */,
+				289AC2DD1A116D38003AB3A6 /* View */,
+				289AC2DC1A116D33003AB3A6 /* Model */,
+				289AC2DB1A116D2D003AB3A6 /* Controller */,
 				289AC2B91A1163C7003AB3A6 /* Images.xcassets */,
 				289AC2BB1A1163C7003AB3A6 /* LaunchScreen.xib */,
 				289AC2B01A1163C7003AB3A6 /* StackOverFlowToGo.xcdatamodeld */,
@@ -120,6 +129,36 @@
 				289AC2C71A1163C7003AB3A6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		289AC2DB1A116D2D003AB3A6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				289AC2E11A116DA9003AB3A6 /* QuestionViewController.h */,
+				289AC2E21A116DA9003AB3A6 /* QuestionViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		289AC2DC1A116D33003AB3A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				289AC2D21A116511003AB3A6 /* NetworkControlelr.h */,
+				289AC2D31A116511003AB3A6 /* NetworkControlelr.m */,
+				289AC2D51A116D1A003AB3A6 /* Question.h */,
+				289AC2D61A116D1A003AB3A6 /* Question.m */,
+				289AC2D81A116D25003AB3A6 /* User.h */,
+				289AC2D91A116D25003AB3A6 /* User.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		289AC2DD1A116D38003AB3A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				289AC2B61A1163C7003AB3A6 /* Main.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,9 +261,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				289AC2D41A116511003AB3A6 /* NetworkControlelr.m in Sources */,
+				289AC2DA1A116D25003AB3A6 /* User.m in Sources */,
 				289AC2B21A1163C7003AB3A6 /* StackOverFlowToGo.xcdatamodeld in Sources */,
+				289AC2E31A116DA9003AB3A6 /* QuestionViewController.m in Sources */,
 				289AC2AF1A1163C7003AB3A6 /* AppDelegate.m in Sources */,
-				289AC2B51A1163C7003AB3A6 /* ViewController.m in Sources */,
+				289AC2D71A116D1A003AB3A6 /* Question.m in Sources */,
 				289AC2AC1A1163C7003AB3A6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
