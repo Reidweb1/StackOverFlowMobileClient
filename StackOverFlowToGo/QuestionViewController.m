@@ -10,6 +10,7 @@
 #import "NetworkControlelr.h"
 #import "Question.h"
 #import "AppDelegate.h"
+#import "QuestionTableCellTableViewCell.h"
 
 @interface QuestionViewController ()
 
@@ -49,10 +50,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier: @"Question Cell"];
+    QuestionTableCellTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"QUESTION_CELL"];
     Question *newQuestion = [[Question alloc] init];
     newQuestion = [self.questions objectAtIndex:indexPath.row];
-    cell.textLabel.text = newQuestion.displayName;
+    cell.questionNameLabel.text = newQuestion.displayName;
     return cell;
 }
 

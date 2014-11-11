@@ -18,6 +18,8 @@
 		289AC2D71A116D1A003AB3A6 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 289AC2D61A116D1A003AB3A6 /* Question.m */; };
 		289AC2DA1A116D25003AB3A6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 289AC2D91A116D25003AB3A6 /* User.m */; };
 		289AC2E31A116DA9003AB3A6 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289AC2E21A116DA9003AB3A6 /* QuestionViewController.m */; };
+		28CD01051A12B3D50012C256 /* QuestionTableCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD01041A12B3D50012C256 /* QuestionTableCellTableViewCell.m */; };
+		28CD01081A12BAF10012C256 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD01071A12BAF10012C256 /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		289AC2D91A116D25003AB3A6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		289AC2E11A116DA9003AB3A6 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
 		289AC2E21A116DA9003AB3A6 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
+		28CD01031A12B3D50012C256 /* QuestionTableCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionTableCellTableViewCell.h; sourceTree = "<group>"; };
+		28CD01041A12B3D50012C256 /* QuestionTableCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableCellTableViewCell.m; sourceTree = "<group>"; };
+		28CD01061A12BAF10012C256 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		28CD01071A12BAF10012C256 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +142,8 @@
 			children = (
 				289AC2E11A116DA9003AB3A6 /* QuestionViewController.h */,
 				289AC2E21A116DA9003AB3A6 /* QuestionViewController.m */,
+				28CD01061A12BAF10012C256 /* WebViewController.h */,
+				28CD01071A12BAF10012C256 /* WebViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -157,6 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				289AC2B61A1163C7003AB3A6 /* Main.storyboard */,
+				28CD01031A12B3D50012C256 /* QuestionTableCellTableViewCell.h */,
+				28CD01041A12B3D50012C256 /* QuestionTableCellTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -265,6 +275,8 @@
 				289AC2DA1A116D25003AB3A6 /* User.m in Sources */,
 				289AC2B21A1163C7003AB3A6 /* StackOverFlowToGo.xcdatamodeld in Sources */,
 				289AC2E31A116DA9003AB3A6 /* QuestionViewController.m in Sources */,
+				28CD01081A12BAF10012C256 /* WebViewController.m in Sources */,
+				28CD01051A12B3D50012C256 /* QuestionTableCellTableViewCell.m in Sources */,
 				289AC2AF1A1163C7003AB3A6 /* AppDelegate.m in Sources */,
 				289AC2D71A116D1A003AB3A6 /* Question.m in Sources */,
 				289AC2AC1A1163C7003AB3A6 /* main.m in Sources */,
@@ -460,6 +472,7 @@
 				289AC2CE1A1163C7003AB3A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		289AC2CF1A1163C7003AB3A6 /* Build configuration list for PBXNativeTarget "StackOverFlowToGoTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +481,7 @@
 				289AC2D11A1163C7003AB3A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -10,4 +10,12 @@
 
 @implementation User
 
+- (instancetype) init:(NSDictionary*) userInfo {
+    self = [super init];
+    if (self) {
+        self.userName = [userInfo objectForKey:@"name"];
+    }
+    return self;
+}
+
 @end

@@ -10,7 +10,10 @@
 
 @interface NetworkControlelr : NSObject
 
-@property NSURLSession *urlSession;
+@property (strong, nonatomic) NSURLSession *urlSession;
+@property (strong, nonatomic) NSString *clientSecret;
+@property (strong, nonatomic) NSString *key;
+@property (strong, nonatomic) NSString *OAUTHDomain;
 
 - (NSMutableArray *) postsFetchRequest: (NSString *) searchTerm completionHandler: (void (^)(NSError* error, NSMutableArray* questions))sucess;
 

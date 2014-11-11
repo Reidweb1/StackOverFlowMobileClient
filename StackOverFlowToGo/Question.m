@@ -10,9 +10,11 @@
 
 @implementation Question
 
-- (id) init: (NSDictionary *) entryDictionary {
+- (instancetype) init: (NSDictionary *) entryDictionary {
     if (self = [super init]) {
-        self.displayName = [entryDictionary objectForKey:(@"display_name")];
+        NSDictionary *userInfo = [[NSDictionary alloc] init];
+        userInfo = entryDictionary[@"owner"];
+        self.displayName = [userInfo objectForKey:(@"display_name")];
     }
     return self;
 }
@@ -26,7 +28,7 @@
     
     itemsArray = [JSONDictionary objectForKey:(@"items")];
     
-    if ([itemsArray isKindOfClass:[NSDictionary class]] == YES) {
+    if ([itemsArray isKindOfClass:[NSMutableArray class]] == YES) {
         for (int i = 0; i < [itemsArray count]; i++) {
             Question *newQuestion = [[Question alloc] init:([itemsArray objectAtIndex:(i)])];
             [questions addObject:newQuestion];

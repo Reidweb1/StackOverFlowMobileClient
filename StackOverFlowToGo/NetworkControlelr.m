@@ -11,10 +11,18 @@
 
 @implementation NetworkControlelr
 
+- (instancetype) init{
+    self.clientSecret = @"HPf)RuUD6Yb*Sj*jXoZmRg((";
+    self.key = @"ErfvNInTQQtGe*1gBLcpuw((";
+    self.OAUTHDomain = @"stackexchange.com/oauth/login_success";
+    self.urlSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    return self;
+}
+
 - (NSMutableArray *) postsFetchRequest: (NSString *) searchTerm completionHandler: (void (^)(NSError* error, NSMutableArray* questions))sucess {
     __block NSMutableArray *results = [[NSMutableArray alloc] init];
-    NSURL *url = [[NSURL alloc] initWithString:@"https://api.stackexchange.com/2.2/posts?order=desc&sort=activity&site=stackoverflow"];
-    self.urlSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    NSURL *url = [[NSURL alloc] initWithString:@"https://api.stackexchange.com/2.2/questions?site=stackoverflow"];
+    // self.urlSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
                        
     NSURLSessionDataTask *repoTask = [self.urlSession dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if ([response isKindOfClass:[NSHTTPURLResponse class]] == YES) {
