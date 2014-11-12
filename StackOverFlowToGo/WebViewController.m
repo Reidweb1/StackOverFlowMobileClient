@@ -24,8 +24,11 @@
     self.key = @"ErfvNInTQQtGe*1gBLcpuw((";
     self.OAUTHDomain = @"https://stackexchange.com/oauth/dialog";
     self.clientID = @"3837";
+    self.OAUTHRedirect = @"https://stackexchange.com/oauth/login_success";
     
-    NSString *urlString = [[NSString alloc] initWithFormat:@"%@?client_id=%@&redirect_uri=%@&scope=read_inbox", _OAUTHDomain, _clientID, _OAUTHDomain];
+    self.webView.navigationDelegate = self;
+    
+    NSString *urlString = [[NSString alloc] initWithFormat:@"https://stackexchange.com/oauth/dialog?client_id=%@&redirect_uri=%@&scope=read_inbox",self.clientID, self.OAUTHRedirect];
     
     NSURL *url = [[NSURL alloc] initWithString:(urlString)];
     NSLog(@"%@", url);
@@ -43,8 +46,16 @@
     self.view = self.webView;
 }
 
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-    return true;
+- (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation {
+    NSString *webViewURL = [webView.URL absoluteString];
+    if ([webViewURL containsString:@"login_success"]) {
+        NSArray *componants = [webViewURL componentsSeparatedByString:@"="];
+        if ([componants count] > 1) {
+            NSString *token = componants.lastObject;
+            NSLog(@"%@", token);
+            [[NSUserDefaults standardUserDefaults] setObject: token forKey: @"token"];
+        }
+    }
 }
 
 /*
