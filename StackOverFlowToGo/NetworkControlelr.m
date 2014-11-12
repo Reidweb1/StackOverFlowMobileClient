@@ -22,9 +22,17 @@
 
 - (NSMutableArray *) postsFetchRequest: (NSString *) searchTerm completionHandler: (void (^)(NSError* error, NSMutableArray* questions))sucess {
     __block NSMutableArray *results = [[NSMutableArray alloc] init];
-    NSURL *url = [[NSURL alloc] initWithString:@"https://api.stackexchange.com/2.2/questions?site=stackoverflow"];
-    // self.urlSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-                       
+    NSString *urlString = [[NSString alloc] init];
+    
+    if ([[NSUserDefaults standardUserDefaults] valueForKey:@"token"]) {
+        NSLog(@"Token Found");
+        urlString = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/questions?site=stackoverflow&%@", searchTerm];
+    } else {
+        NSLog(@"Token Not Found");
+        urlString = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/questions?site=stackoverflow&%@", searchTerm];
+    }
+    
+    NSURL *url = [[NSURL alloc] initWithString: urlString];
     NSURLSessionDataTask *repoTask = [self.urlSession dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if ([response isKindOfClass:[NSHTTPURLResponse class]] == YES) {
             NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;

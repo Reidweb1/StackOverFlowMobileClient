@@ -18,6 +18,7 @@
 		289AC2D71A116D1A003AB3A6 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 289AC2D61A116D1A003AB3A6 /* Question.m */; };
 		289AC2DA1A116D25003AB3A6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 289AC2D91A116D25003AB3A6 /* User.m */; };
 		289AC2E31A116DA9003AB3A6 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289AC2E21A116DA9003AB3A6 /* QuestionViewController.m */; };
+		28C512E31A1409C900A96D54 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C512E21A1409C900A96D54 /* InitialViewController.m */; };
 		28CD01051A12B3D50012C256 /* QuestionTableCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD01041A12B3D50012C256 /* QuestionTableCellTableViewCell.m */; };
 		28CD01081A12BAF10012C256 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD01071A12BAF10012C256 /* WebViewController.m */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,8 @@
 		289AC2D91A116D25003AB3A6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		289AC2E11A116DA9003AB3A6 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
 		289AC2E21A116DA9003AB3A6 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
+		28C512E11A1409C900A96D54 /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
+		28C512E21A1409C900A96D54 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
 		28CD01031A12B3D50012C256 /* QuestionTableCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionTableCellTableViewCell.h; sourceTree = "<group>"; };
 		28CD01041A12B3D50012C256 /* QuestionTableCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableCellTableViewCell.m; sourceTree = "<group>"; };
 		28CD01061A12BAF10012C256 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 				289AC2E21A116DA9003AB3A6 /* QuestionViewController.m */,
 				28CD01061A12BAF10012C256 /* WebViewController.h */,
 				28CD01071A12BAF10012C256 /* WebViewController.m */,
+				28C512E11A1409C900A96D54 /* InitialViewController.h */,
+				28C512E21A1409C900A96D54 /* InitialViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 				289AC2B21A1163C7003AB3A6 /* StackOverFlowToGo.xcdatamodeld in Sources */,
 				289AC2E31A116DA9003AB3A6 /* QuestionViewController.m in Sources */,
 				28CD01081A12BAF10012C256 /* WebViewController.m in Sources */,
+				28C512E31A1409C900A96D54 /* InitialViewController.m in Sources */,
 				28CD01051A12B3D50012C256 /* QuestionTableCellTableViewCell.m in Sources */,
 				289AC2AF1A1163C7003AB3A6 /* AppDelegate.m in Sources */,
 				289AC2D71A116D1A003AB3A6 /* Question.m in Sources */,
