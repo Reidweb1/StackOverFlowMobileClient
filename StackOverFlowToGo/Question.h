@@ -11,7 +11,6 @@
 @interface Question : NSObject
 
 @property NSString *displayName;
-
 + (NSMutableArray *) parseJSONFile: (NSData *) results;
 
 @end
