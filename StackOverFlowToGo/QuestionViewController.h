@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QuestionViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface QuestionViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (strong, nonatomic) NSString *searchText;
 
 @end

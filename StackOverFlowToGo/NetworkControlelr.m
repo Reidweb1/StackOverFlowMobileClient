@@ -22,17 +22,10 @@
 
 - (NSMutableArray *) postsFetchRequest: (NSString *) searchTerm completionHandler: (void (^)(NSError* error, NSMutableArray* questions))sucess {
     __block NSMutableArray *results = [[NSMutableArray alloc] init];
-    NSString *urlString = [[NSString alloc] init];
+    NSURL *url = [[NSURL alloc] init];
     
-    if ([[NSUserDefaults standardUserDefaults] valueForKey:@"token"]) {
-        NSLog(@"Token Found");
-        urlString = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/questions?site=stackoverflow&%@", searchTerm];
-    } else {
-        NSLog(@"Token Not Found");
-        urlString = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/questions?site=stackoverflow&%@", searchTerm];
-    }
+    url = [self buildURL:searchTerm];
     
-    NSURL *url = [[NSURL alloc] initWithString: urlString];
     NSURLSessionDataTask *repoTask = [self.urlSession dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if ([response isKindOfClass:[NSHTTPURLResponse class]] == YES) {
             NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
@@ -48,6 +41,23 @@
     }];
     [repoTask resume];
     return results;
+}
+
+- (NSURL *) buildURL:(NSString *) searchTerm {
+    NSURL *newURL = [[NSURL alloc] init];
+    if ([[NSUserDefaults standardUserDefaults] valueForKey:@"token"]) {
+        NSString *token = [[NSString alloc] init];
+        token = [[NSUserDefaults standardUserDefaults] objectForKey: @"token"];
+        NSString *fullURLString = [[NSString alloc] initWithFormat: @"https://api.stackexchange.com/2.2/questions?tagged=%@&site=stackoverflow&token=%@", searchTerm, token];
+        newURL = [[NSURL alloc] initWithString:fullURLString];
+        NSLog(@"Token Found");
+        NSLog(@"%@", fullURLString);
+    } else {
+        NSString *fullURLString = [[NSString alloc] initWithFormat: @"https://api.stackexchange.com/2.2/questions?site=stackoverflow&%@", searchTerm];
+        newURL = [[NSURL alloc] initWithString:fullURLString];
+        NSLog(@"Token Not Found");
+    }
+    return newURL;
 }
                                       
 @end

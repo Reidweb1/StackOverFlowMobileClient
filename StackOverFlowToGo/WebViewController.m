@@ -51,7 +51,9 @@
     if ([webViewURL containsString:@"login_success"]) {
         NSArray *componants = [webViewURL componentsSeparatedByString:@"="];
         if ([componants count] > 1) {
-            NSString *token = componants[1];
+            NSString *tokenComponants = componants[1];
+            NSArray *tokenSeparated = [tokenComponants componentsSeparatedByString:@"&"];
+            NSString *token = tokenSeparated[0];
             NSLog(@"%@", token);
             [[NSUserDefaults standardUserDefaults] setObject: token forKey: @"token"];
             [self dismissViewControllerAnimated:true completion:nil];

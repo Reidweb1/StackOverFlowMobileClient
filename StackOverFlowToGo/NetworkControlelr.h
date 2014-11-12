@@ -17,5 +17,6 @@
 @property (strong, nonatomic) NSString *clientID;
 
 - (NSMutableArray *) postsFetchRequest: (NSString *) searchTerm completionHandler: (void (^)(NSError* error, NSMutableArray* questions))sucess;
+- (NSURL *) buildURL:(NSString *) searchTerm;
 
 @end

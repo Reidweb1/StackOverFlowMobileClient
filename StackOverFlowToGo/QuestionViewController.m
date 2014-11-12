@@ -27,17 +27,11 @@
     // Do any additional setup after loading the view.
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    
+    self.searchBar.delegate = self;
     UIApplication *application = [UIApplication sharedApplication];
     AppDelegate *appDelegate = application.delegate;
     self.networkController = appDelegate.networkContrtoller;
     self.questions = [[NSMutableArray alloc] init];
-    [self.networkController postsFetchRequest:@"SEARCH TERM" completionHandler:^(NSError *error, NSMutableArray *questions) {
-        if (error == nil) {
-            self.questions = questions;
-            [self.tableView reloadData];
-        }
-    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,6 +49,17 @@
     newQuestion = [self.questions objectAtIndex:indexPath.row];
     cell.questionNameLabel.text = newQuestion.displayName;
     return cell;
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    self.searchText = [[NSString alloc] init];
+    self.searchText = self.searchBar.text;
+    [self.networkController postsFetchRequest:self.searchText completionHandler:^(NSError *error, NSMutableArray *questions) {
+        if (error == nil) {
+            self.questions = questions;
+            [self.tableView reloadData];
+        }
+    }];
 }
 
 /*
