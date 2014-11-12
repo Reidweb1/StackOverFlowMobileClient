@@ -21,6 +21,7 @@
 		28C512E31A1409C900A96D54 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C512E21A1409C900A96D54 /* InitialViewController.m */; };
 		28C512E51A141AF500A96D54 /* sampleStackOverflow.json in Resources */ = {isa = PBXBuildFile; fileRef = 28C512E41A141AF500A96D54 /* sampleStackOverflow.json */; };
 		28C512E71A141BC800A96D54 /* JSONTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C512E61A141BC800A96D54 /* JSONTest.m */; };
+		28C512F21A14296500A96D54 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28C512F41A14296500A96D54 /* Localizable.strings */; };
 		28CD01051A12B3D50012C256 /* QuestionTableCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD01041A12B3D50012C256 /* QuestionTableCellTableViewCell.m */; };
 		28CD01081A12BAF10012C256 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD01071A12BAF10012C256 /* WebViewController.m */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,10 @@
 		28C512E21A1409C900A96D54 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
 		28C512E41A141AF500A96D54 /* sampleStackOverflow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sampleStackOverflow.json; sourceTree = "<group>"; };
 		28C512E61A141BC800A96D54 /* JSONTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONTest.m; sourceTree = "<group>"; };
+		28C512EA1A14259D00A96D54 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		28C512EB1A14259D00A96D54 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		28C512F31A14296500A96D54 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		28C512F51A14296D00A96D54 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		28CD01031A12B3D50012C256 /* QuestionTableCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionTableCellTableViewCell.h; sourceTree = "<group>"; };
 		28CD01041A12B3D50012C256 /* QuestionTableCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableCellTableViewCell.m; sourceTree = "<group>"; };
 		28CD01061A12BAF10012C256 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
@@ -125,6 +130,7 @@
 				289AC2AA1A1163C7003AB3A6 /* Info.plist */,
 				289AC2AB1A1163C7003AB3A6 /* main.m */,
 				28C512E61A141BC800A96D54 /* JSONTest.m */,
+				28C512F41A14296500A96D54 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -245,6 +251,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 289AC29D1A1163C7003AB3A6;
 			productRefGroup = 289AC2A71A1163C7003AB3A6 /* Products */;
@@ -262,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28C512F21A14296500A96D54 /* Localizable.strings in Resources */,
 				28C512E51A141AF500A96D54 /* sampleStackOverflow.json in Resources */,
 				289AC2B81A1163C7003AB3A6 /* Main.storyboard in Resources */,
 				289AC2BD1A1163C7003AB3A6 /* LaunchScreen.xib in Resources */,
@@ -320,6 +328,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				289AC2B71A1163C7003AB3A6 /* Base */,
+				28C512EA1A14259D00A96D54 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -328,8 +337,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				289AC2BC1A1163C7003AB3A6 /* Base */,
+				28C512EB1A14259D00A96D54 /* es */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		28C512F41A14296500A96D54 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28C512F31A14296500A96D54 /* en */,
+				28C512F51A14296D00A96D54 /* es */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

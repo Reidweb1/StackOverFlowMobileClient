@@ -10,4 +10,6 @@
 
 @interface InitialViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *helloLabel;
+
 @end
