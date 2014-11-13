@@ -234,10 +234,10 @@
             </objects>
             <point key="canvasLocation" x="1780" y="-379"/>
         </scene>
-        <!--View Controller-->
+        <!--User View Controller-->
         <scene sceneID="uVf-Yj-aJ0">
             <objects>
-                <viewController id="h8W-F2-hnm" sceneMemberID="viewController">
+                <viewController id="h8W-F2-hnm" customClass="UserViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TcB-JP-ReT"/>
                         <viewControllerLayoutGuide type="bottom" id="75K-ym-cvN"/>
@@ -267,6 +267,10 @@
                             <constraint firstItem="75K-ym-cvN" firstAttribute="top" secondItem="jH8-bH-g63" secondAttribute="bottom" id="xV9-nK-Vk4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="o3N-Ns-Vr8" id="SGC-Xd-D3a"/>
+                        <outlet property="tableView" destination="jH8-bH-g63" id="uzB-ox-ySx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4FZ-4k-eOK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

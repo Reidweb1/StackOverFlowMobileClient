@@ -24,6 +24,7 @@
 		28C512F21A14296500A96D54 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28C512F41A14296500A96D54 /* Localizable.strings */; };
 		28CD01051A12B3D50012C256 /* QuestionTableCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD01041A12B3D50012C256 /* QuestionTableCellTableViewCell.m */; };
 		28CD01081A12BAF10012C256 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD01071A12BAF10012C256 /* WebViewController.m */; };
+		28D4703C1A156587006451B1 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D4703B1A156587006451B1 /* UserViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		28CD01041A12B3D50012C256 /* QuestionTableCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableCellTableViewCell.m; sourceTree = "<group>"; };
 		28CD01061A12BAF10012C256 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		28CD01071A12BAF10012C256 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		28D4703A1A156587006451B1 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		28D4703B1A156587006451B1 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,8 @@
 				28CD01071A12BAF10012C256 /* WebViewController.m */,
 				28C512E11A1409C900A96D54 /* InitialViewController.h */,
 				28C512E21A1409C900A96D54 /* InitialViewController.m */,
+				28D4703A1A156587006451B1 /* UserViewController.h */,
+				28D4703B1A156587006451B1 /* UserViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -298,6 +303,7 @@
 				28CD01081A12BAF10012C256 /* WebViewController.m in Sources */,
 				28C512E31A1409C900A96D54 /* InitialViewController.m in Sources */,
 				28CD01051A12B3D50012C256 /* QuestionTableCellTableViewCell.m in Sources */,
+				28D4703C1A156587006451B1 /* UserViewController.m in Sources */,
 				289AC2AF1A1163C7003AB3A6 /* AppDelegate.m in Sources */,
 				289AC2D71A116D1A003AB3A6 /* Question.m in Sources */,
 				289AC2AC1A1163C7003AB3A6 /* main.m in Sources */,
