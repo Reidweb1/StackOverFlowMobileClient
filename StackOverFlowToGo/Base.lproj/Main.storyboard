@@ -247,7 +247,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jH8-bH-g63">
-                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="o3N-Ns-Vr8">
@@ -263,9 +263,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="jH8-bH-g63" secondAttribute="trailing" constant="-16" id="NbU-Mt-t5E"/>
                             <constraint firstItem="o3N-Ns-Vr8" firstAttribute="top" secondItem="TcB-JP-ReT" secondAttribute="bottom" id="Y0V-QD-EiC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="o3N-Ns-Vr8" secondAttribute="trailing" constant="-16" id="dI9-ZA-k7L"/>
-                            <constraint firstItem="jH8-bH-g63" firstAttribute="top" secondItem="o3N-Ns-Vr8" secondAttribute="bottom" id="jIj-n5-rQQ"/>
+                            <constraint firstItem="jH8-bH-g63" firstAttribute="top" secondItem="o3N-Ns-Vr8" secondAttribute="bottom" constant="-44" id="jIj-n5-rQQ"/>
                             <constraint firstItem="75K-ym-cvN" firstAttribute="top" secondItem="jH8-bH-g63" secondAttribute="bottom" id="xV9-nK-Vk4"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="GqQ-G4-Jwo"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="o3N-Ns-Vr8" id="SGC-Xd-D3a"/>

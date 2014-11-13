@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface UserViewController : UIViewController <UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>
 

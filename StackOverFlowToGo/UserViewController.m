@@ -9,6 +9,7 @@
 #import "UserViewController.h"
 #import "NetworkControlelr.h"
 #import "AppDelegate.h"
+#import "User.h"
 
 @interface UserViewController ()
 
@@ -39,7 +40,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier: @"USER"];
-    cell.textLabel.text = @"Test";
+    User *selectedUser = [[User alloc] init];
+    selectedUser = [self.users objectAtIndex:indexPath.row];
+    cell.textLabel.text = selectedUser.userName;
     return cell;
 }
 
@@ -50,11 +53,13 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     self.searchText = [[NSString alloc] init];
     self.searchText = self.searchBar.text;
-    [self.networkController postsFetchRequest:self.searchText completionHandler:^(NSError *error, NSMutableArray *questions) {
+    [SVProgressHUD show];
+    [self.networkController userFetchRequest:self.searchText completionHandler:^(NSError *error, NSMutableArray *questions) {
         if (error == nil) {
             self.users = questions;
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                 [self.tableView reloadData];
+                [SVProgressHUD dismiss];
             }];
         }
     }];

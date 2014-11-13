@@ -56,11 +56,13 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     self.searchText = [[NSString alloc] init];
     self.searchText = self.searchBar.text;
+    [SVProgressHUD show];
     [self.networkController postsFetchRequest:self.searchText completionHandler:^(NSError *error, NSMutableArray *questions) {
         if (error == nil) {
             self.questions = questions;
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                 [self.tableView reloadData];
+                [SVProgressHUD dismiss];
             }];
         }
     }];
