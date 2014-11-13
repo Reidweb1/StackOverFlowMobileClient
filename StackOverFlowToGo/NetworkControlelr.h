@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface NetworkControlelr : NSObject
 
@@ -18,5 +19,6 @@
 
 - (NSMutableArray *) postsFetchRequest: (NSString *) searchTerm completionHandler: (void (^)(NSError* error, NSMutableArray* questions))sucess;
 - (NSURL *) buildURL:(NSString *) searchTerm;
+- (UIImage *) stringToImage:(NSString *) imageString;
 
 @end

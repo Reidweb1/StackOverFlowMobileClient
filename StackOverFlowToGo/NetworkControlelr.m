@@ -59,5 +59,12 @@
     }
     return newURL;
 }
+
+- (UIImage *) stringToImage:(NSString *) imageString {
+    NSURL *url = [[NSURL alloc] initWithString:(imageString)];
+    NSData *data = [[NSData alloc] initWithContentsOfURL:url];
+    UIImage *newImage = [[UIImage alloc] initWithData:data];
+    return newImage;
+}
                                       
 @end

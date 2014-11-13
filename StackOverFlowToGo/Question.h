@@ -11,6 +11,9 @@
 @interface Question : NSObject
 
 @property NSString *displayName;
+@property NSString *questionBodyText;
+@property NSString *imageURL;
+
 + (NSMutableArray *) parseJSONFile: (NSData *) results;
 
 @end

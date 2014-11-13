@@ -15,6 +15,8 @@
         NSDictionary *userInfo = [[NSDictionary alloc] init];
         userInfo = entryDictionary[@"owner"];
         self.displayName = [userInfo objectForKey:(@"display_name")];
+        self.questionBodyText = [entryDictionary objectForKey:(@"title")];
+        self.imageURL = [userInfo objectForKey:(@"profile_image")];
     }
     return self;
 }

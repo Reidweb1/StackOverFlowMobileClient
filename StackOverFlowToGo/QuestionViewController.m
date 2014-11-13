@@ -48,6 +48,8 @@
     Question *newQuestion = [[Question alloc] init];
     newQuestion = [self.questions objectAtIndex:indexPath.row];
     cell.questionNameLabel.text = newQuestion.displayName;
+    cell.questionBodyLabel.text = newQuestion.questionBodyText;
+    cell.imageView.image = [self.networkController stringToImage:newQuestion.imageURL];
     return cell;
 }
 
