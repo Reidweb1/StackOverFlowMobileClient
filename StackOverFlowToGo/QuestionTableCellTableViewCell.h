@@ -13,6 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *questionNameLabel;
 @property (weak, nonatomic) IBOutlet UIView *profileImageView;
 @property (weak, nonatomic) IBOutlet UILabel *questionBodyLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 
 @end

@@ -49,7 +49,7 @@
     newQuestion = [self.questions objectAtIndex:indexPath.row];
     cell.questionNameLabel.text = newQuestion.displayName;
     cell.questionBodyLabel.text = newQuestion.questionBodyText;
-    cell.imageView.image = [self.networkController stringToImage:newQuestion.imageURL];
+    cell.avatarImageView.image = [self.networkController stringToImage:newQuestion.imageURL];
     return cell;
 }
 
@@ -59,7 +59,9 @@
     [self.networkController postsFetchRequest:self.searchText completionHandler:^(NSError *error, NSMutableArray *questions) {
         if (error == nil) {
             self.questions = questions;
-            [self.tableView reloadData];
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                [self.tableView reloadData];
+            }];
         }
     }];
 }
