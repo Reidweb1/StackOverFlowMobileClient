@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) NSString *userName;
 
++ (NSMutableArray *) parseJSONFile: (NSData *) results;
+
 @end

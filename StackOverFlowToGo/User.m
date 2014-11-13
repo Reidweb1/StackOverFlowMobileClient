@@ -13,9 +13,28 @@
 - (instancetype) init:(NSDictionary*) userInfo {
     self = [super init];
     if (self) {
-        self.userName = [userInfo objectForKey:@"name"];
+        self.userName = [userInfo objectForKey:@"display_name"];
     }
     return self;
+}
+
++ (NSMutableArray *) parseJSONFile: (NSData *) results {
+    
+    NSError *error = [[NSError alloc] init];
+    NSDictionary *JSONDictionary = [NSJSONSerialization JSONObjectWithData: results options: 0 error: &error];
+    NSMutableArray *itemsArray = [[NSMutableArray alloc] init];
+    NSMutableArray *users = [[NSMutableArray alloc] init];
+    
+    itemsArray = [JSONDictionary objectForKey:(@"items")];
+    
+    if ([itemsArray isKindOfClass:[NSMutableArray class]] == YES) {
+        for (int i = 0; i < [itemsArray count]; i++) {
+            User *newUser = [[User alloc] init:([itemsArray objectAtIndex:(i)])];
+            [users addObject:newUser];
+        }
+    }
+    
+    return users;
 }
 
 @end

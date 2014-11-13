@@ -117,6 +117,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="h8W-F2-hnm" kind="show" id="AZO-6m-1yl"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -229,7 +232,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEw-Ap-ZaX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1767" y="77"/>
+            <point key="canvasLocation" x="1780" y="-379"/>
+        </scene>
+        <!--User View Controller-->
+        <scene sceneID="uVf-Yj-aJ0">
+            <objects>
+                <viewController id="h8W-F2-hnm" customClass="UserViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TcB-JP-ReT"/>
+                        <viewControllerLayoutGuide type="bottom" id="75K-ym-cvN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i9Y-nH-ZR9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jH8-bH-g63">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="o3N-Ns-Vr8">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jH8-bH-g63" firstAttribute="leading" secondItem="i9Y-nH-ZR9" secondAttribute="leadingMargin" constant="-16" id="5kn-gb-nEw"/>
+                            <constraint firstItem="jH8-bH-g63" firstAttribute="top" secondItem="o3N-Ns-Vr8" secondAttribute="bottom" id="GqQ-G4-Jwo"/>
+                            <constraint firstItem="o3N-Ns-Vr8" firstAttribute="leading" secondItem="i9Y-nH-ZR9" secondAttribute="leadingMargin" constant="-16" id="MBZ-RL-cSJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jH8-bH-g63" secondAttribute="trailing" constant="-16" id="NbU-Mt-t5E"/>
+                            <constraint firstItem="o3N-Ns-Vr8" firstAttribute="top" secondItem="TcB-JP-ReT" secondAttribute="bottom" id="Y0V-QD-EiC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="o3N-Ns-Vr8" secondAttribute="trailing" constant="-16" id="dI9-ZA-k7L"/>
+                            <constraint firstItem="jH8-bH-g63" firstAttribute="top" secondItem="o3N-Ns-Vr8" secondAttribute="bottom" constant="-44" id="jIj-n5-rQQ"/>
+                            <constraint firstItem="75K-ym-cvN" firstAttribute="top" secondItem="jH8-bH-g63" secondAttribute="bottom" id="xV9-nK-Vk4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="GqQ-G4-Jwo"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="o3N-Ns-Vr8" id="SGC-Xd-D3a"/>
+                        <outlet property="tableView" destination="jH8-bH-g63" id="uzB-ox-ySx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4FZ-4k-eOK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1780" y="296"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="22Q-7o-C6y">
