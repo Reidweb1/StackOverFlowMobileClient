@@ -15,6 +15,7 @@
     if (self) {
         self.userName = [userInfo objectForKey:@"display_name"];
         self.imageString = [userInfo objectForKey:@"profile_image"];
+        self.location = [userInfo objectForKey:@"location"];
     }
     return self;
 }

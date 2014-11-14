@@ -40,10 +40,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UserTableCell *cell = [[UserTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier: @"USER_CELL"];
+    UserTableCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"USER_CELL"];
     User *selectedUser = [[User alloc] init];
     selectedUser = [self.users objectAtIndex:indexPath.row];
     cell.userNameLabel.text = selectedUser.userName;
+    cell.secondaryLabel.text = selectedUser.location;
     cell.avatarImageView.image = [self.networkController stringToImage:selectedUser.imageString];
     return cell;
 }
