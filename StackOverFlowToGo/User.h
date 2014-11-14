@@ -11,6 +11,7 @@
 @interface User : NSObject
 
 @property (strong, nonatomic) NSString *userName;
+@property (strong, nonatomic) NSString *imageString;
 
 + (NSMutableArray *) parseJSONFile: (NSData *) results;
 

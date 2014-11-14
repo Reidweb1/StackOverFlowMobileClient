@@ -44,7 +44,7 @@
     User *selectedUser = [[User alloc] init];
     selectedUser = [self.users objectAtIndex:indexPath.row];
     cell.userNameLabel.text = selectedUser.userName;
-    
+    cell.avatarImageView.image = [self.networkController stringToImage:selectedUser.imageString];
     return cell;
 }
 

@@ -14,6 +14,7 @@
     self = [super init];
     if (self) {
         self.userName = [userInfo objectForKey:@"display_name"];
+        self.imageString = [userInfo objectForKey:@"profile_image"];
     }
     return self;
 }
