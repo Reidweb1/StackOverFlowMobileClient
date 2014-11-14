@@ -10,6 +10,7 @@
 #import "NetworkControlelr.h"
 #import "AppDelegate.h"
 #import "User.h"
+#import "UserTableCell.h"
 
 @interface UserViewController ()
 
@@ -39,10 +40,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier: @"USER"];
+    UserTableCell *cell = [[UserTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier: @"USER_CELL"];
     User *selectedUser = [[User alloc] init];
     selectedUser = [self.users objectAtIndex:indexPath.row];
-    cell.textLabel.text = selectedUser.userName;
+    cell.userNameLabel.text = selectedUser.userName;
+    
     return cell;
 }
 
