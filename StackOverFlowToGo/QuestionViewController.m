@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) NetworkControlelr *networkController;
 @property (strong, nonatomic) NSMutableArray *questions;
-@property (strong, nonatomic) NSMutableArray *photos;
+@property (strong, nonatomic) NSCache *photos;
 
 @end
 
@@ -33,7 +33,7 @@
     AppDelegate *appDelegate = application.delegate;
     self.networkController = appDelegate.networkContrtoller;
     self.questions = [[NSMutableArray alloc] init];
-    self.photos = [[NSMutableArray alloc] init];
+    self.photos = [[NSCache alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,12 +51,13 @@
     newQuestion = [self.questions objectAtIndex:indexPath.row];
     cell.questionNameLabel.text = newQuestion.displayName;
     cell.questionBodyLabel.text = newQuestion.questionBodyText;
-    if (![self.photos objectAtIndex:indexPath.row]) {
+    NSString *cacheKey = [[NSString alloc] initWithFormat:@"%ld",(long)indexPath.row];
+    if (![self.photos objectForKey: cacheKey]) {
         UIImage *questionPhoto = [self.networkController stringToImage:newQuestion.imageURL];
         cell.avatarImageView.image = questionPhoto;
-        [self.photos insertObject:questionPhoto atIndex:indexPath.row];
+        [self.photos setObject:questionPhoto forKey:cacheKey];
     } else {
-        cell.avatarImageView.image = [self.photos objectAtIndex:indexPath.row];
+        cell.avatarImageView.image = [self.photos objectForKey:cacheKey];
     }
     return cell;
 }

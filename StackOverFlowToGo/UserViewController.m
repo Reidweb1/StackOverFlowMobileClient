@@ -16,6 +16,7 @@
 
 @property (weak, nonatomic) NetworkControlelr *networkController;
 @property (strong, nonatomic) NSMutableArray *users;
+@property (strong, nonatomic) NSCache *photos;
 
 @end
 
@@ -45,6 +46,14 @@
     selectedUser = [self.users objectAtIndex:indexPath.row];
     cell.userNameLabel.text = selectedUser.userName;
     cell.secondaryLabel.text = selectedUser.location;
+    NSString *cacheKey = [[NSString alloc] initWithFormat:@"%ld", (long)indexPath.row];
+    if ([self.photos objectForKey:cacheKey] == nil) {
+        UIImage *userPhoto = [self.networkController stringToImage:selectedUser.imageString];
+        cell.avatarImageView.image = userPhoto;
+        [self.photos setObject:userPhoto forKey:cacheKey];
+    } else {
+        cell.avatarImageView.image = [self.photos objectForKey:cacheKey];
+    }
     cell.avatarImageView.image = [self.networkController stringToImage:selectedUser.imageString];
     return cell;
 }
