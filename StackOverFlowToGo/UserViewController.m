@@ -77,6 +77,10 @@
     }];
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+    [SVProgressHUD dismiss];
+}
+
 /*
 #pragma mark - Navigation
 
