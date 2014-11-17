@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9P4-uJ-VJ4">
-                                <rect key="frame" x="16" y="28" width="107" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9P4-uJ-VJ4">
+                                <rect key="frame" x="247" y="289" width="107" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Mhr-ze-jct"/>
                                     <constraint firstAttribute="width" constant="107" id="pyA-EJ-hUR"/>
@@ -30,8 +30,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="9P4-uJ-VJ4" firstAttribute="top" secondItem="oso-Zm-bfL" secondAttribute="bottom" constant="8" id="46j-XO-ZQF"/>
-                            <constraint firstItem="9P4-uJ-VJ4" firstAttribute="leading" secondItem="AKs-mg-TQg" secondAttribute="leadingMargin" id="q4n-5z-ugb"/>
+                            <constraint firstItem="9P4-uJ-VJ4" firstAttribute="top" secondItem="oso-Zm-bfL" secondAttribute="bottom" constant="269" id="46j-XO-ZQF"/>
+                            <constraint firstItem="9P4-uJ-VJ4" firstAttribute="leading" secondItem="AKs-mg-TQg" secondAttribute="leadingMargin" constant="231" id="q4n-5z-ugb"/>
                         </constraints>
                     </view>
                     <connections>
